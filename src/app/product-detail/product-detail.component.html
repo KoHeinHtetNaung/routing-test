@@ -1,0 +1,28 @@
+
+  <h3>Proudct Details</h3>
+
+  <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngIf="!noFound">
+        <td>{{product.productId}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+
+      <tr *ngIf="noFound">
+        <td>Not Found...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a  class="btn btn-warning" (click)="onBack()">Back</a>
